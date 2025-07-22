@@ -832,5 +832,44 @@
   });
 </script>
 
+
+		
+<script>
+  function initGliders() {
+    document.querySelectorAll('.glider').forEach((el) => {
+      if (!el.classList.contains('glider-initialized')) {
+        new Glider(el, {
+          slidesToShow: 1,
+          dots: el.parentElement.querySelector('.dots'),
+          arrows: {
+            prev: el.parentElement.querySelector('.glider-prev'),
+            next: el.parentElement.querySelector('.glider-next')
+          },
+          draggable: true
+        });
+        el.classList.add('glider-initialized');
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initGliders();
+
+    const toggleBtn = document.getElementById('toggleProducts');
+    const moreProducts = document.getElementById('more-products');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = moreProducts.style.display === 'none';
+      moreProducts.style.display = isHidden ? 'flex' : 'none';
+      toggleBtn.textContent = isHidden ? 'Vis færre produkter' : 'Vis flere produkter';
+
+      if (isHidden) {
+        // Re-initier glidere i nye produkter
+        initGliders();
+      }
+    });
+  });
+</script>
+
 	</body>
 </html>
