@@ -104,7 +104,9 @@
 								<!-- Features -->
 <section class="box features">
   <h2 class="major"><span>Produkter</span></h2>
-  <div class="row">
+  
+	
+<div class="row">
 
 	  
 <!-- Produkt 160x80x80 -->
@@ -261,6 +263,10 @@
     </ul>
   </section>
 </div>
+
+</div>
+
+<div class="row" id="more-products" style="display: none;">
 
 
 <!-- Produkt 160x40x40 -->
@@ -538,12 +544,21 @@
     </div>
     <h3><a href="#">Betongkloss Spesiallaget</a></h3>
     <p style="text-align: left;">
-      Klosser kan designes etter behov. Bildene viser noen eksempler. 
+      Klosser kan designes etter behov. Bildene viser noen eksempler. Ta kontakt med ønsker.
     </p>
   </section>
 </div>
+	
+
+  </div>
+</section>
+
+</div>
 
 
+  <!-- Knapp -->
+  <div style="text-align: center; margin-top: 2em;">
+    <button id="toggleProducts" class="button">Vis flere produkter</button>
   </div>
 </section>
 
@@ -551,10 +566,25 @@
 							<div class="col-12">
 
 
+<script>
+  document.getElementById('toggleProducts').addEventListener('click', function () {
+    const more = document.getElementById('more-products');
+    const btn = this;
+    if (more.style.display === 'none') {
+      more.style.display = 'flex';
+      btn.textContent = 'Vis færre produkter';
+    } else {
+      more.style.display = 'none';
+      btn.textContent = 'Vis flere produkter';
+    }
+  });
+</script>
+
+
 
 								<!-- Features -->
 <section class="box features">
-  <h2 class="major"><span>Løfting</span></h2>
+  <h2 class="major"><span>Håndtering av betongklosser</span></h2>
   <div class="row">
 
 <!-- Avsnitt før bildene -->
