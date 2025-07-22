@@ -548,12 +548,7 @@
     </p>
   </section>
 </div>
-	
 
-  </div>
-</section>
-
-</div>
 
 
   <!-- Knapp -->
@@ -561,6 +556,21 @@
     <button id="toggleProducts" class="button">Vis flere produkter</button>
   </div>
 </section>
+
+		<!-- Show more button -->
+<script>
+  document.getElementById('toggleProducts').addEventListener('click', function () {
+    const more = document.getElementById('more-products');
+    const btn = this;
+    if (more.style.display === 'none') {
+      more.style.display = 'flex';
+      btn.textContent = 'Vis færre produkter';
+    } else {
+      more.style.display = 'none';
+      btn.textContent = 'Vis flere produkter';
+    }
+  });
+</script>
 
 							</div>
 							<div class="col-12">
@@ -795,20 +805,6 @@
 			<script src="assets/js/main.js"></script>
 
 
-		<!-- Show more button -->
-<script>
-  document.getElementById('toggleProducts').addEventListener('click', function () {
-    const more = document.getElementById('more-products');
-    const btn = this;
-    if (more.style.display === 'none') {
-      more.style.display = 'flex';
-      btn.textContent = 'Vis færre produkter';
-    } else {
-      more.style.display = 'none';
-      btn.textContent = 'Vis flere produkter';
-    }
-  });
-</script>
 
 		
 		<!-- Glider.js Script -->
