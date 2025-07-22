@@ -5,6 +5,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
+	<!-- Glider.js CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+	
 	<head>
 		<title>Betongklosser - Kongsberg Ferdigbetong AS</title>
 		<meta charset="utf-8" />
@@ -177,6 +181,26 @@
       </section>
     </div>
 
+	  
+<section class="box feature">
+  <div class="glider-contain">
+    <div class="glider">
+      <img src="images/Betongblokker SW/120x40x40.png" alt="Vinkel 1" />
+      <img src="images/Betongblokker SW/120x40x40.png" alt="Vinkel 2" />
+      <img src="images/Betongblokker SW/120x40x40.png" alt="Vinkel 3" />
+    </div>
+    <button class="glider-prev">«</button>
+    <button class="glider-next">»</button>
+    <div class="dots"></div>
+  </div>
+  <h3><a href="#">Betongkloss 160x80x80 cm</a></h3>
+  <ul style="text-align: left;">
+    <li>Dimensjoner: 160x80x80 cm</li>
+    <li>Vekt: 2400 kg</li>
+    <li>Bruksområde: Støttemur, vegg, konstruksjon</li>
+  </ul>
+</section>
+
 
 
 	  
@@ -339,6 +363,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Glider.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<script>
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  });
+</script>
 
 	</body>
 </html>
