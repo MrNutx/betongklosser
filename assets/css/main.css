@@ -3105,3 +3105,17 @@ input, select, textarea {
 			}
 
 	}
+
+/* Tilpassede stiler for produktvisning */
+
+.image.featured img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
