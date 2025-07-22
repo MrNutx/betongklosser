@@ -3124,17 +3124,19 @@ input, select, textarea {
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  border-radius: 50%;
+  border-radius: 10%;
   width: 32px;
   height: 32px;
-  font-size: 1.5em;
+  font-size: 20px;
   color: #333;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  line-height: 1;
+  font-family: Arial, sans-serif;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 0;
 }
 
 .glider-prev:hover,
