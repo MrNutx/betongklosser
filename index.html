@@ -795,6 +795,20 @@
 			<script src="assets/js/main.js"></script>
 
 
+		<!-- Show more button -->
+<script>
+  document.getElementById('toggleProducts').addEventListener('click', function () {
+    const more = document.getElementById('more-products');
+    const btn = this;
+    if (more.style.display === 'none') {
+      more.style.display = 'flex';
+      btn.textContent = 'Vis færre produkter';
+    } else {
+      more.style.display = 'none';
+      btn.textContent = 'Vis flere produkter';
+    }
+  });
+</script>
 
 		
 		<!-- Glider.js Script -->
@@ -813,63 +827,16 @@
   });
 </script>
 
+		
 		<!-- Lightbox2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
 
-		<!-- Show more button -->
-<script>
-  document.getElementById('toggleProducts').addEventListener('click', function () {
-    const more = document.getElementById('more-products');
-    const btn = this;
-    if (more.style.display === 'none') {
-      more.style.display = 'flex';
-      btn.textContent = 'Vis færre produkter';
-    } else {
-      more.style.display = 'none';
-      btn.textContent = 'Vis flere produkter';
-    }
-  });
-</script>
+
 
 
 		
-<script>
-  function initGliders() {
-    document.querySelectorAll('.glider').forEach((el) => {
-      if (!el.classList.contains('glider-initialized')) {
-        new Glider(el, {
-          slidesToShow: 1,
-          dots: el.parentElement.querySelector('.dots'),
-          arrows: {
-            prev: el.parentElement.querySelector('.glider-prev'),
-            next: el.parentElement.querySelector('.glider-next')
-          },
-          draggable: true
-        });
-        el.classList.add('glider-initialized');
-      }
-    });
-  }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    initGliders();
-
-    const toggleBtn = document.getElementById('toggleProducts');
-    const moreProducts = document.getElementById('more-products');
-
-    toggleBtn.addEventListener('click', () => {
-      const isHidden = moreProducts.style.display === 'none';
-      moreProducts.style.display = isHidden ? 'flex' : 'none';
-      toggleBtn.textContent = isHidden ? 'Vis færre produkter' : 'Vis flere produkter';
-
-      if (isHidden) {
-        // Re-initier glidere i nye produkter
-        initGliders();
-      }
-    });
-  });
-</script>
 
 	</body>
 </html>
