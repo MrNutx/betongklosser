@@ -3113,9 +3113,10 @@ input, select, textarea {
   object-fit: cover;
   width: 100%;
 }
-
+/*
 .equal-height {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+*/
