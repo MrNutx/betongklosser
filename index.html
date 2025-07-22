@@ -458,14 +458,16 @@
 		<!-- Glider.js Script -->
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <script>
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    draggable: true,
-    dots: '.dots',
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
-    }
+  document.querySelectorAll('.glider-contain').forEach(container => {
+    new Glider(container.querySelector('.glider'), {
+      slidesToShow: 1,
+      draggable: true,
+      dots: container.querySelector('.dots'),
+      arrows: {
+        prev: container.querySelector('.glider-prev'),
+        next: container.querySelector('.glider-next')
+      }
+    });
   });
 </script>
 
