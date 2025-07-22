@@ -3114,6 +3114,40 @@ input, select, textarea {
   margin-top: 0.5em;
 }
 
+/* Slider */
+
+.glider-contain {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.glider img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.glider-prev,
+.glider-next {
+  background-color: #ccc;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.glider-prev {
+  left: 0.25em;
+}
+
+.glider-next {
+  right: 0.25em;
+}
+
 /* Tilpassede stiler for produktvisning */
 /*
 .image.featured img {
