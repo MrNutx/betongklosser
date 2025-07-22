@@ -566,20 +566,6 @@
 							<div class="col-12">
 
 
-<script>
-  document.getElementById('toggleProducts').addEventListener('click', function () {
-    const more = document.getElementById('more-products');
-    const btn = this;
-    if (more.style.display === 'none') {
-      more.style.display = 'flex';
-      btn.textContent = 'Vis færre produkter';
-    } else {
-      more.style.display = 'none';
-      btn.textContent = 'Vis flere produkter';
-    }
-  });
-</script>
-
 
 
 								<!-- Features -->
@@ -830,6 +816,21 @@
 		<!-- Lightbox2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
+
+		<!-- Show more button -->
+<script>
+  document.getElementById('toggleProducts').addEventListener('click', function () {
+    const more = document.getElementById('more-products');
+    const btn = this;
+    if (more.style.display === 'none') {
+      more.style.display = 'flex';
+      btn.textContent = 'Vis færre produkter';
+    } else {
+      more.style.display = 'none';
+      btn.textContent = 'Vis flere produkter';
+    }
+  });
+</script>
 
 	</body>
 </html>
