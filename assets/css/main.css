@@ -3114,38 +3114,41 @@ input, select, textarea {
   margin-top: 0.5em;
 }
 
-/* Slider */
-
-.glider-contain {
-  position: relative;
-  margin-bottom: 1em;
-}
-
-.glider img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
+/* Glider */
 
 .glider-prev,
 .glider-next {
-  background-color: #ccc;
-  border: none;
-  font-size: 1.5em;
-  padding: 0.25em 0.5em;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.glider-prev:hover,
+.glider-next:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .glider-prev {
-  left: 0.25em;
+  left: 5px;
 }
 
 .glider-next {
-  right: 0.25em;
+  right: 5px;
 }
 
 /* Tilpassede stiler for produktvisning */
