@@ -803,16 +803,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <script>
-    // En global liste for å holde styr på initialiserte glidere
     const initializedGliderInstances = new Map();
 
     function initializeOrRefreshGliders(containerSelector) {
         document.querySelectorAll(containerSelector).forEach(container => {
             const gliderElement = container.querySelector('.glider');
 
-            // Sjekk om glideren allerede er initialisert
             if (!initializedGliderInstances.has(gliderElement)) {
-                // Initialiser glider hvis den ikke er det
                 const gliderInstance = new Glider(gliderElement, {
                     slidesToShow: 1,
                     draggable: true,
@@ -822,33 +819,33 @@
                         next: container.querySelector('.glider-next')
                     }
                 });
-                initializedGliderInstances.set(gliderElement, gliderInstance); // Lagre instansen
+                initializedGliderInstances.set(gliderElement, gliderInstance);
             } else {
-                // Hvis glideren allerede er initialisert, kall refresh() for å oppdatere den
-                // Dette er viktig når elementer endrer synlighet/størrelse
-                initializedGliderInstances.get(gliderElement).refresh(true); // 'true' for å resette posisjon også
+                initializedGliderInstances.get(gliderElement).refresh(true);
             }
         });
     }
 
-    // Initialiser glidere som er synlige ved lasting av siden
     document.addEventListener('DOMContentLoaded', () => {
         initializeOrRefreshGliders('.glider-contain');
     });
 
-    // Show more button
     document.getElementById('toggleProducts').addEventListener('click', function () {
         const moreProductsContainer = document.getElementById('more-products');
         const btn = this;
 
         if (moreProductsContainer.style.display === 'none' || moreProductsContainer.style.display === '') {
-            moreProductsContainer.style.display = 'block'; // Bruk 'block' i stedet for 'flex' for denne div-en
+            moreProductsContainer.style.display = 'block'; // Vis containeren
+
+            // Tving nettleseren til å gjengi layouten på nytt
+            // Dette er et lite triks for å tvinge re-render
+            moreProductsContainer.style.visibility = 'hidden'; // Skjul midlertidig
+            moreProductsContainer.offsetHeight; // Tving reflow
+            moreProductsContainer.style.visibility = 'visible'; // Vis igjen
+
             btn.textContent = 'Vis færre produkter';
-            // Etter at elementene er synlige, initialiser/refresh gliderne i den viste seksjonen
             initializeOrRefreshGliders('#more-products .glider-contain');
-            // Det kan også være lurt å trigge et window resize event manuelt
-            // for å sikre at alle Glider-instanser re-kalkulerer seg
-            window.dispatchEvent(new Event('resize'));
+            window.dispatchEvent(new Event('resize')); // Send resize event for Glider.js og responsive elementer
 
         } else {
             moreProductsContainer.style.display = 'none';
