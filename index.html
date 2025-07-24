@@ -799,15 +799,21 @@
 
 
 
+		
+
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <script>
-    // Funksjon for å initialisere Glider.js på alle containere
-    function initializeGliders(containerSelector) {
+    // En global liste for å holde styr på initialiserte glidere
+    const initializedGliderInstances = new Map();
+
+    function initializeOrRefreshGliders(containerSelector) {
         document.querySelectorAll(containerSelector).forEach(container => {
-            // Sjekk om glideren allerede er initialisert for å unngå duplikater
-            // Dette kan gjøres ved å legge til en datattributt, f.eks. data-glider-initialized="true"
-            if (!container.dataset.gliderInitialized) {
-                new Glider(container.querySelector('.glider'), {
+            const gliderElement = container.querySelector('.glider');
+
+            // Sjekk om glideren allerede er initialisert
+            if (!initializedGliderInstances.has(gliderElement)) {
+                // Initialiser glider hvis den ikke er det
+                const gliderInstance = new Glider(gliderElement, {
                     slidesToShow: 1,
                     draggable: true,
                     dots: container.querySelector('.dots'),
@@ -816,29 +822,36 @@
                         next: container.querySelector('.glider-next')
                     }
                 });
-                container.dataset.gliderInitialized = 'true'; // Marker som initialisert
+                initializedGliderInstances.set(gliderElement, gliderInstance); // Lagre instansen
+            } else {
+                // Hvis glideren allerede er initialisert, kall refresh() for å oppdatere den
+                // Dette er viktig når elementer endrer synlighet/størrelse
+                initializedGliderInstances.get(gliderElement).refresh(true); // 'true' for å resette posisjon også
             }
         });
     }
 
     // Initialiser glidere som er synlige ved lasting av siden
     document.addEventListener('DOMContentLoaded', () => {
-        initializeGliders('.glider-contain');
+        initializeOrRefreshGliders('.glider-contain');
     });
 
     // Show more button
     document.getElementById('toggleProducts').addEventListener('click', function () {
-        const more = document.getElementById('more-products');
+        const moreProductsContainer = document.getElementById('more-products');
         const btn = this;
 
-        if (more.style.display === 'none' || more.style.display === '') {
-            more.style.display = 'flex';
+        if (moreProductsContainer.style.display === 'none' || moreProductsContainer.style.display === '') {
+            moreProductsContainer.style.display = 'block'; // Bruk 'block' i stedet for 'flex' for denne div-en
             btn.textContent = 'Vis færre produkter';
-            // Når produktene vises, initialiser gliderne kun i den nylig viste seksjonen
-            // Eller re-initialiser alle glidere hvis det er enklere for din struktur
-            initializeGliders('#more-products .glider-contain');
+            // Etter at elementene er synlige, initialiser/refresh gliderne i den viste seksjonen
+            initializeOrRefreshGliders('#more-products .glider-contain');
+            // Det kan også være lurt å trigge et window resize event manuelt
+            // for å sikre at alle Glider-instanser re-kalkulerer seg
+            window.dispatchEvent(new Event('resize'));
+
         } else {
-            more.style.display = 'none';
+            moreProductsContainer.style.display = 'none';
             btn.textContent = 'Vis flere produkter';
         }
     });
