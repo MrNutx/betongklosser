@@ -3135,38 +3135,6 @@ input, select, textarea {
 }
 
 
-/* Bilde venstre side */
-
-.text-image-section {
-  padding: 4em 0;
-  background: #f8f8f8;
-}
-
-.content-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2em;
-}
-
-.text-side {
-  flex: 1 1 45%;
-}
-
-.image-side {
-  flex: 1 1 45%;
-}
-
-.image-side .glider {
-  max-width: 100%;
-}
-
-.image-side img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
 
 
 /*
