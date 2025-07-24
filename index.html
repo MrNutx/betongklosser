@@ -798,8 +798,55 @@
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<script>
+    // Funksjon for å initialisere Glider.js på alle containere
+    function initializeGliders(containerSelector) {
+        document.querySelectorAll(containerSelector).forEach(container => {
+            // Sjekk om glideren allerede er initialisert for å unngå duplikater
+            // Dette kan gjøres ved å legge til en datattributt, f.eks. data-glider-initialized="true"
+            if (!container.dataset.gliderInitialized) {
+                new Glider(container.querySelector('.glider'), {
+                    slidesToShow: 1,
+                    draggable: true,
+                    dots: container.querySelector('.dots'),
+                    arrows: {
+                        prev: container.querySelector('.glider-prev'),
+                        next: container.querySelector('.glider-next')
+                    }
+                });
+                container.dataset.gliderInitialized = 'true'; // Marker som initialisert
+            }
+        });
+    }
+
+    // Initialiser glidere som er synlige ved lasting av siden
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeGliders('.glider-contain');
+    });
+
+    // Show more button
+    document.getElementById('toggleProducts').addEventListener('click', function () {
+        const more = document.getElementById('more-products');
+        const btn = this;
+
+        if (more.style.display === 'none' || more.style.display === '') {
+            more.style.display = 'flex';
+            btn.textContent = 'Vis færre produkter';
+            // Når produktene vises, initialiser gliderne kun i den nylig viste seksjonen
+            // Eller re-initialiser alle glidere hvis det er enklere for din struktur
+            initializeGliders('#more-products .glider-contain');
+        } else {
+            more.style.display = 'none';
+            btn.textContent = 'Vis flere produkter';
+        }
+    });
+</script>
+
 		
-		<!-- Glider.js Script --> 
+		
+		<!-- Glider.js Script --> <!--
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <script>
   document.querySelectorAll('.glider-contain').forEach(container => {
@@ -816,7 +863,7 @@
 </script>
 
 
-		<!-- Show more button --> 
+		<!-- Show more button --> <!--
 <script>
   document.getElementById('toggleProducts').addEventListener('click', function () {
     const more = document.getElementById('more-products');
@@ -831,7 +878,7 @@
   });
 </script>
 
-
+-->
 
 
 
