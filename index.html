@@ -799,17 +799,17 @@
 
 
 <script>
-  function initGliders() {
-    document.querySelectorAll('.glider').forEach((el) => {
+  function initGliders(scope = document) {
+    scope.querySelectorAll('.glider').forEach((el) => {
       if (!el.classList.contains('glider-initialized')) {
         new Glider(el, {
           slidesToShow: 1,
+          draggable: true,
           dots: el.parentElement.querySelector('.dots'),
           arrows: {
             prev: el.parentElement.querySelector('.glider-prev'),
             next: el.parentElement.querySelector('.glider-next')
-          },
-          draggable: true
+          }
         });
         el.classList.add('glider-initialized');
       }
@@ -828,10 +828,10 @@
       toggleBtn.textContent = isHidden ? 'Vis færre produkter' : 'Vis flere produkter';
 
       if (isHidden) {
-        // Vent til DOM-oppdateringen er synlig før vi initierer glider på nye produkter
+        // Initier gliders i den nylig viste delen
         setTimeout(() => {
-          initGliders();
-        }, 100);
+          initGliders(moreProducts);
+        }, 50);
       }
     });
   });
