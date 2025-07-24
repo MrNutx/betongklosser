@@ -3126,6 +3126,14 @@ input, select, textarea {
   height: 100%;
 }
 
+
+.glider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /*
 
 .glider-prev,
