@@ -565,6 +565,7 @@
 </div>
 <div class="col-12">
 
+	
 								<!-- Features -->
 <section class="box features">
   <h2 class="major"><span>Håndtering av betongklosser</span></h2>
@@ -835,7 +836,8 @@
         const btn = this;
 
         if (moreProductsContainer.style.display === 'none' || moreProductsContainer.style.display === '') {
-            moreProductsContainer.style.display = 'block'; // Vis containeren
+            moreProductsContainer.style.display = 'flex';
+	    moreProductsContainer.style.flexWrap = 'wrap';	// Vis containeren 
 
             // Tving nettleseren til å gjengi layouten på nytt
             // Dette er et lite triks for å tvinge re-render
