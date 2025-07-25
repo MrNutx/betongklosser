@@ -3275,10 +3275,15 @@ html {
 }
 
 
-/* Skjul piler på mobil men ikke på PC 
 @media (max-width: 768px) {
   .glider-prev,
   .glider-next {
-    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
   }
 }
