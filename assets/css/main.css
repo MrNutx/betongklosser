@@ -3135,60 +3135,27 @@ input, select, textarea {
 }
 
 
+/* Fast høyde på galleri-bildene */
+.product-slider .glider {
+  display: flex;
+  align-items: center;
+  height: 400px; /* Juster høyde etter behov */
+}
 
-
-/*
-
-.glider-prev,
-.glider-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 10%;
-  width: 32px;
-  height: 32px;
-  font-size: 20px;
-  color: #333;
-  cursor: pointer;
+/* Sørg for at bildene tilpasser seg uten å strekke */
+.product-slider .glider a {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  padding: 0;
-}
-
-.glider-prev:hover,
-.glider-next:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.glider-prev {
-  left: 5px;
-}
-
-.glider-next {
-  right: 5px;
-}
-
-*/
-
-/* Tilpassede stiler for produktvisning */
-/*
-.image.featured img {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-/*
-.equal-height {
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  padding: 0 10px; /* litt mellomrom mellom bildene */
+  box-sizing: border-box;
 }
-*/
+
+/* Bilde-stil for sentrering og proporsjon */
+.product-slider .glider img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
