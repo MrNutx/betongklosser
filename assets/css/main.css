@@ -3241,3 +3241,7 @@ input, select, textarea {
   text-decoration: underline;
 }
 
+#copyright {
+  max-width: 800px;
+  margin: 0 auto;
+}
