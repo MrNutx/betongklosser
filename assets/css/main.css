@@ -3273,3 +3273,22 @@ html {
 #logo {
     display: none;
 }
+
+#titleBar {
+    display: flex; /* Sørg for at den er en flex-container */
+    align-items: center; /* Vertikal sentrering for flex-elementer */
+    justify-content: center; /* Horisontal sentrering for flex-elementer */
+    min-height: 4em; /* Juster dette hvis boksen er for liten/stor, f.eks. 3em, 4em, etc. */
+    padding: 0 1em; /* Litt padding på sidene for tekst */
+    box-sizing: border-box; /* Viktig for å unngå breddeproblemer med padding */
+    /* Du kan også legge til bakgrunnsfarge, grenser osv. her */
+    background-color: #f8f8f8; /* Eksempel, juster til din farge */
+    border-bottom: solid 1px #e8e8e8; /* Eksempel */
+}
+
+#titleBar .title {
+    /* Tekstfarge, skriftstørrelse, etc. for tittelen */
+    color: #333; /* Eksempel, juster til din farge */
+    font-size: 1.2em; /* Eksempel, juster etter behov */
+    font-weight: bold; /* Eksempel */
+
