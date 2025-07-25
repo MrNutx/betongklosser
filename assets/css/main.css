@@ -3245,3 +3245,12 @@ input, select, textarea {
   max-width: 800px;
   margin: 0 auto;
 }
+
+
+
+
+/* Smooth scroll */
+
+html {
+  scroll-behavior: smooth;
+}
