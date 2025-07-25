@@ -3268,3 +3268,9 @@ html {
   visibility: hidden;
 }
 
+
+#logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
