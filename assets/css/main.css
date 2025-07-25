@@ -3217,14 +3217,25 @@ input, select, textarea {
 
 
 #copyright {
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Midtstill horisontalt */
+  align-items: center;     /* Vertikalt sentrert */
   padding: 1em 0;
+  white-space: nowrap;     /* Ikke linjeskift */
+  gap: 0.5em;              /* Litt luft mellom elementene */
   font-size: 0.9em;
-  white-space: nowrap; /* Forhindrer linjeskift */
-  overflow: hidden;    /* Unngå at tekst flyter utenfor */
-  text-overflow: ellipsis; /* Hvis for lang tekst, vis ... */
+  background-color: #f0f0f0; /* Eller hva du har som bakgrunn */
 }
-
+#copyright ul.menu {
+  display: flex;
+  gap: 0.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#copyright ul.menu li {
+  white-space: nowrap;     /* Hindre linjeskift i listen */
+}
 #copyright a {
   color: inherit;
   text-decoration: underline;
