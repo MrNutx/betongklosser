@@ -3169,3 +3169,44 @@ input, select, textarea {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-logo img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.contact-details p {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+}
+
+.contact-details a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-logo img {
+    margin-bottom: 1em;
+  }
+}
+
+
+
+
