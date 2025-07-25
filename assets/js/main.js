@@ -40,13 +40,13 @@
 			offset: function() { return $nav.height() - 5; }
 		});
 
-	// Nav.
+	// Nav. $('#logo').html()
 
 		// Title Bar.
 			$(
 				'<div id="titleBar">' +
 					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
+					'<span class="title">' + Betongklosser.com + '</span>' +
 				'</div>'
 			)
 				.appendTo($body);
