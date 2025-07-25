@@ -3269,10 +3269,16 @@ html {
 }
 
 
-/* Skjul logo på PC men ikke mobil */
+/* Skjul logo på PC men ikke på mobil */
 #logo {
     display: none;
 }
 
 
-
+/* Skjul piler på mobil men ikke på PC */
+@media (max-width: 768px) {
+  .glider-prev,
+  .glider-next {
+    display: none !important;
+  }
+}
