@@ -3274,36 +3274,4 @@ html {
     display: none;
 }
 
-/* Stil for selve tittellinjen på mobil, generert av JavaScript */
-#titleBar {
-    display: flex; /* Aktiverer flexbox for å enklere sentrere innhold */
-    align-items: center; /* Vertikal sentrering av innholdet */
-    justify-content: center; /* Horisontal sentrering av innholdet */
-    min-height: 4em; /* Minimum høyde på tittellinjen (juster ved behov) */
-    padding: 0 1em; /* Litt innvendig luft */
-    box-sizing: border-box;
-    background-color: #f8f8f8; /* Eksempel bakgrunn */
-    border-bottom: solid 1px #e8e8e8; /* Eksempel kantlinje */
-}
 
-/* Stil for selve teksten "Betongklosser" som vises i mobilmenyen */
-#titleBar .title {
-    /* Sikrer at teksten tar opp tilgjengelig plass og sentreres */
-    flex-grow: 1; /* Lar elementet vokse for å fylle plassen */
-    text-align: center; /* Horisontal sentrering av teksten */
-    color: #333; /* Farge på teksten */
-    font-size: 1.2em; /* Skriftstørrelse */
-    font-weight: bold; /* Fet skrift */
-    margin: 0; /* Fjern standard margin på h1-elementet som kan forstyrre sentrering */
-    padding: 0; /* Fjern standard padding */
-    line-height: 1; /* Nullstill linjehøyden for h1-en slik at den ikke påvirker vertikal justering for mye */
-}
-
-/* Eventuell stil for toggle-knappen om den eksisterer (selv om usynlig/ustommet) */
-#titleBar .toggle {
-    /* Dette elementet forstyrrer sentreringen hvis det er der.
-       Vi kan skjule det helt, eller plassere det absolutt.
-       Hvis du er sikker på at du ikke vil ha et hamburgerikon,
-       kan du skjule det: */
-    display: none;
-}
