@@ -3218,9 +3218,11 @@ input, select, textarea {
 
 #copyright {
   text-align: center;
-  padding: 2em 0;
+  padding: 1em 0;
   font-size: 0.9em;
-  color: #888;
+  white-space: nowrap; /* Forhindrer linjeskift */
+  overflow: hidden;    /* Unngå at tekst flyter utenfor */
+  text-overflow: ellipsis; /* Hvis for lang tekst, vis ... */
 }
 
 #copyright a {
