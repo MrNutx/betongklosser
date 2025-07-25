@@ -3207,6 +3207,12 @@ input, select, textarea {
   }
 }
 
+.contact-details i {
+  margin-right: 0.6em;
+  color: #666;
+  min-width: 1.2em;
+}
+
 
 
 
