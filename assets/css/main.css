@@ -3288,3 +3288,25 @@ html {
     background: none !important;
   }
 }
+
+
+
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* juster høyde etter behov */
+  background-color: #333; /* mørk bakgrunn for kontrast */
+  color: white;
+  display: flex;
+  align-items: center; /* vertikalt sentrer */
+  justify-content: center; /* horisontalt sentrer, eller bruk 'flex-start' hvis du vil ha logoen til venstre */
+  z-index: 1000; /* sørg for at den ligger over annet innhold */
+}
+
+#logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+}
