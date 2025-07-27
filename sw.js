@@ -61,6 +61,11 @@ const CACHE_ASSETS = [
   '/images/Gallery_14.jpg',
   '/images/Gallery_15.jpg',
   '/images/Gallery_16.jpg',
+  '/images/Gallery_17.jpg',
+  '/images/Gallery_18.jpg',
+  '/images/Gallery_19.jpg',
+  '/images/Gallery_20.jpg',
+  '/images/Gallery_21.jpg',
   '/images/KFB.jpg',
   // legg til flere filer du ønsker å cache
 ];
