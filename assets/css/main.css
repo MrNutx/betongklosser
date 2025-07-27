@@ -3214,6 +3214,7 @@ input, select, textarea {
 }
 
 
+/* Copyright */
 
 
 #copyright {
@@ -3225,6 +3226,7 @@ input, select, textarea {
   gap: 0.5em;              /* Litt luft mellom elementene */
   font-size: 0.9em;
   background-color: #f0f0f0; /* Eller hva du har som bakgrunn */
+  color: #222; /* Mørkere tekst for bedre kontrast */
 }
 #copyright ul.menu {
   display: flex;
@@ -3237,7 +3239,8 @@ input, select, textarea {
   white-space: nowrap;     /* Hindre linjeskift i listen */
 }
 #copyright a {
-  color: inherit;
+  color: #004080; /* Mørk blå for god kontrast og tydelig lenke */
+  /* color: inherit; */
   text-decoration: underline;
 }
 
