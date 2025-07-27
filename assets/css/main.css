@@ -3278,7 +3278,7 @@ html {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .glider-prev,
   .glider-next {
     opacity: 0 !important;
