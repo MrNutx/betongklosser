@@ -35,6 +35,10 @@ const CACHE_ASSETS = [
   '/images/Betongblokker SW/160x80x80 Radius.png',
   '/images/Betongblokker SW/160x80x80 Topp Radius.png',
   '/images/Betongblokker SW/160x80x40 Topp Radius.png',
+  '/images/Betongblokker SW/100x100x100 L-Vegg.png',
+  '/images/Betongblokker SW/100x100x100 L-Vegg 2.png',
+  '/images/Betongblokker SW/160x80x80 Trapp.png',
+  '/images/Betongblokker SW/200x54x90 Jersey.png',
   '/images/2D_example_1.PNG',
   '/images/2D_example_2.PNG',
   '/images/2D_example_3.PNG',
@@ -67,6 +71,11 @@ const CACHE_ASSETS = [
   '/images/Gallery_20.jpg',
   '/images/Gallery_21.jpg',
   '/images/KFB.jpg',
+  '/images/Anker_1.jpg',
+  '/images/Anker_2.jpg',
+  '/images/Gaffelspor_2.jpg',
+  '/images/Klype_40.jpg',
+  '/images/Klype_80.jpg',
   // legg til flere filer du ønsker å cache
 ];
 
