@@ -3319,3 +3319,7 @@ html {
   }
 </style>
 
+
+.contact-logo img {
+  max-width: 200px;
+}
