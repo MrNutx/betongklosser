@@ -71,6 +71,7 @@ const CACHE_ASSETS = [
   '/images/Gallery_20.jpg',
   '/images/Gallery_21.jpg',
   '/images/KFB.jpg',
+  '/images/KFBlogo.jpg',
   '/images/Anker_1.jpg',
   '/images/Anker_2.jpg',
   '/images/Gaffelspor_2.jpg',
