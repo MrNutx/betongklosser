@@ -3321,5 +3321,7 @@ html {
 
 
 .contact-logo img {
-  max-width: 600px;
+  width: 200px !important;
+  height: auto !important;
+  display: block;
 }
