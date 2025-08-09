@@ -897,59 +897,49 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Betongklosser",
-  "image": "https://betongklosser.com/images/KFBlogo.jpg",
-  "@id": "https://betongklosser.com",
-  "url": "https://betongklosser.com",
-  "telephone": "+47 32 73 22 00",
-  "email": "post@kongsberg-ferdigbetong.no",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stollveien 23",
-    "addressLocality": "Kongsberg",
-    "postalCode": "3617",
-    "addressCountry": "NO"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 59.648,
-    "longitude": 9.651
-  },
-  "sameAs": [
-    "https://www.kongsberg-ferdigbetong.no"
-  ],
-  "makesOffer": [
+  "@graph": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Betongkloss 160x80x80 cm",
-        "weight": "2400 kg"
+      "@type": "Product",
+      "name": "Betongkloss 160x80x80 cm",
+      "weight": "2400 kg",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NOK",
+        "price": "2000",
+        "availability": "http://schema.org/InStock"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Betongkloss 80x80x80 cm",
-        "weight": "1200 kg"
+      "@type": "Product",
+      "name": "Betongkloss 80x80x80 cm",
+      "weight": "1200 kg",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NOK",
+        "price": "1500",
+        "availability": "http://schema.org/InStock"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Betongkloss toppblokk 160x80x80 cm",
-        "weight": "2400 kg"
+      "@type": "Product",
+      "name": "Betongkloss toppblokk 160x80x80 cm",
+      "weight": "2400 kg",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NOK",
+        "price": "2000",
+        "availability": "http://schema.org/InStock"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Betongkloss 160x40x40 cm",
-        "weight": "600 kg"
+      "@type": "Product",
+      "name": "Betongkloss 160x40x40 cm",
+      "weight": "600 kg",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NOK",
+        "price": "900",
+        "availability": "http://schema.org/InStock"
       }
     }
   ]
@@ -959,8 +949,10 @@
 
 
 
+
 	</body>
 </html>
+
 
 
 
